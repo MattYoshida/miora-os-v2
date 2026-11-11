@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* MIORA brand tokens for this snapshot. */
+:root {
+  --ink: #0b0f12; --muted: #5b6370; --brand: #4a7a8f; --brand-d: #345f71; --brand-t: #476f82;
+  --bg: #f6f3f0; --panel: #ffffff; --chip: #ebe7e4; --line: #e4dfda; --soft: #f0f6f9;
+  --ok: #3e7356; --warn: #9a6a12; --bad: #a6402f;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #eaf0f3; --muted: #9aa4ae; --brand: #4a7a8f; --brand-d: #5a8ba1; --brand-t: #9cc3d4;
+    --bg: #0f1417; --panel: #161c20; --chip: #1f272c; --line: #2b343a; --soft: #1a2328;
+    --ok: #7cc096; --warn: #e0b25a; --bad: #ec8a78;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-ink: var(--ink); --color-muted: var(--muted); --color-brand: var(--brand); --color-brand-d: var(--brand-d);
+  --color-brand-t: var(--brand-t); --color-bg: var(--bg); --color-panel: var(--panel); --color-chip: var(--chip);
+  --color-line: var(--line); --color-soft: var(--soft); --color-ok: var(--ok); --color-warn: var(--warn); --color-bad: var(--bad);
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: var(--font-lora), Georgia, serif;
+}
+
+body { background: var(--bg); color: var(--ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+
+@layer components {
+  .eyebrow { @apply text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-t mb-1; }
+  .field { @apply w-full rounded-xl border border-line bg-panel px-3 py-2.5 text-sm outline-none focus:border-brand; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full border-[1.5px] border-ink px-4 min-h-10 text-[13px] font-semibold transition-colors hover:bg-ink hover:text-bg disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply bg-brand border-brand text-white hover:bg-brand-d hover:border-brand-d hover:text-white; }
+  .btn-bad { @apply border-bad text-bad hover:bg-bad hover:text-bg; }
+  .pill { @apply inline-block rounded-full bg-chip px-2 py-0.5 text-xs whitespace-nowrap; }
+  .card { @apply rounded-2xl border border-line bg-panel; }
+}

@@ -1,0 +1,286 @@
+{
+ "version": 1,
+ "date": "2026-10-30",
+ "count": "len(unicodedata.normalize('NFC', s))",
+ "headline_max": 40,
+ "headline_target": 27,
+ "description_max": 30,
+ "line1_max": 125,
+ "reels_front": 44,
+ "sets_per_ad": 3,
+ "angle_tags": [
+  "story",
+  "proof",
+  "offer",
+  "mechanism",
+  "callout",
+  "avatar-swap",
+  "checklist",
+  "quote"
+ ],
+ "max_line1_word_overlap": 0.6,
+ "primary": {
+  "ugc-talk": {
+   "min": 300,
+   "max": 900,
+   "alt_min": 120,
+   "alt_max": 1200,
+   "emoji_max": 8,
+   "cta": "SHOP_NOW"
+  },
+  "ugc-story": {
+   "min": 400,
+   "max": 1100,
+   "alt_min": 150,
+   "alt_max": 1500,
+   "emoji_max": 4,
+   "cta": "SHOP_NOW"
+  },
+  "podcast": {
+   "min": 300,
+   "max": 800,
+   "alt_min": 120,
+   "alt_max": 1200,
+   "emoji_max": 3,
+   "cta": "LEARN_MORE"
+  },
+  "vsl": {
+   "min": 600,
+   "max": 1400,
+   "alt_min": 200,
+   "alt_max": 2200,
+   "emoji_max": 8,
+   "cta": "LEARN_MORE"
+  },
+  "drama": {
+   "min": 450,
+   "max": 900,
+   "alt_min": 200,
+   "alt_max": 1400,
+   "emoji_max": 8,
+   "cta": "LEARN_MORE"
+  },
+  "animation": {
+   "min": 250,
+   "max": 650,
+   "alt_min": 120,
+   "alt_max": 1000,
+   "emoji_max": 4,
+   "cta": "SHOP_NOW"
+  },
+  "demo": {
+   "min": 150,
+   "max": 450,
+   "alt_min": 120,
+   "alt_max": 700,
+   "emoji_max": 6,
+   "cta": "SHOP_NOW"
+  },
+  "static": {
+   "min": 200,
+   "max": 700,
+   "alt_min": 120,
+   "alt_max": 1000,
+   "emoji_max": 6,
+   "cta": "SHOP_NOW"
+  },
+  "native": {
+   "min": 700,
+   "max": 2200,
+   "alt_min": 300,
+   "alt_max": 2200,
+   "emoji_max": 0,
+   "cta": "LEARN_MORE"
+  },
+  "native-longcaption": {
+   "min": 5500,
+   "max": 9500,
+   "alt_min": 700,
+   "alt_max": 9500,
+   "emoji_max": 0,
+   "cta": "LEARN_MORE",
+   "require_alt_max": 2200
+  },
+  "native-story": {
+   "min": 2000,
+   "max": 35000,
+   "alt_min": 2000,
+   "alt_max": 35000,
+   "emoji_max": 3,
+   "cta": "SHOP_NOW",
+   "price_repeat_max": 4,
+   "banned_ok": [
+    "money back",
+    "microplastic",
+    "toxic",
+    "chemicals"
+   ]
+  }
+ },
+ "description_default": "Free shipping over $75",
+ "cta_never": [
+  "SEE_MORE"
+ ],
+ "cta_by_lander": {
+  "research": [
+   "LEARN_MORE"
+  ],
+  "advertorial": [
+   "LEARN_MORE"
+  ],
+  "listicle": [
+   "SHOP_NOW",
+   "LEARN_MORE"
+  ],
+  "angle": [
+   "SHOP_NOW",
+   "LEARN_MORE"
+  ],
+  "product": [
+   "SHOP_NOW",
+   "BUY_NOW"
+  ],
+  "holiday": [
+   "ORDER_NOW",
+   "SHOP_NOW",
+   "GET_OFFER"
+  ]
+ },
+ "cta_story_concepts": [
+  "ugc-story",
+  "drama",
+  "podcast",
+  "vsl",
+  "native",
+  "native-longcaption",
+  "native-story"
+ ],
+ "cta_conditions": {
+  "ORDER_NOW": "copy contains a real cut-off date (e.g. 'Order by Nov 12')",
+  "GET_OFFER": "headline names the live dated event offer shown on the lander",
+  "BUY_NOW": "product lander AND most-aware/retargeting ad"
+ },
+ "line1_must_not_start_with": [
+  "MIORA",
+  "Introducing",
+  "Luxury",
+  "Discover"
+ ],
+ "banned": [
+  "500\\+ five-star",
+  "trusted by .* hotels",
+  "top 1%",
+  "\\b(550|600|650|700|800) ?GSM",
+  "Egyptian cotton",
+  "\\d(\\.\\d)? ?(stars?|★)",
+  "[\\d,]+\\+? (five-star |5-star )?reviews"
+ ],
+ "case_sensitive_banned": [
+  "Miora",
+  "miora "
+ ],
+ "warn": [],
+ "live_sales": [
+  {
+   "name": "Fall Linen Event",
+   "ends": "2099-12-31",
+   "discount": "20% off",
+   "compare_at": {
+    "$149.95": "$187.95",
+    "$209.95": "$262.95",
+    "$299.95": "$374.95"
+   }
+  }
+ ],
+ "sale_exempt": [
+  "\\d+ ?% ?off",
+  "\\bsave \\$",
+  "\\bwas \\$(?!149\\.95|209\\.95|299\\.95|18\\.74)\\d"
+ ],
+ "sale_event_end_regex": "ends? (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* (\\d{1,2})",
+ "price_rules": {
+  "allowed_prices": [
+   "$149.95",
+   "$209.95",
+   "$299.95",
+   "$18.74",
+   "$75"
+  ],
+  "set_price_pairs": {
+   "The Switch": "$149.95",
+   "The Bath Suite": "$209.95",
+   "Host & Home": "$299.95"
+  },
+  "switch_contents": "8 towels (2 bath, 2 hand, 4 face)",
+  "per_towel_phrase": "$18.74 a towel",
+  "per_towel_max_per_text": 1,
+  "forbid_together": [
+   [
+    "$149.95",
+    "under \\$19"
+   ]
+  ],
+  "returns_exact": "30-day returns",
+  "returns_trigger": "return",
+  "shipping_exact": "free shipping over $75"
+ },
+ "message_match": {
+  "line1_reuses_hook_entities": true,
+  "min_hook_word_overlap": 0.5,
+  "lander_keywords": {
+   "smell": [
+    "smell",
+    "sour",
+    "musty"
+   ],
+   "smell-over-60": [
+    "smell",
+    "sour"
+   ],
+   "feel": [
+    "feel",
+    "soft"
+   ],
+   "skin": [
+    "skin"
+   ],
+   "no-shed": [
+    "lint",
+    "shed"
+   ],
+   "clean": [
+    "clean"
+   ],
+   "host": [
+    "guest"
+   ],
+   "five-star-towels": [
+    "hotel"
+   ],
+   "*-reasons": [
+    "reasons"
+   ]
+  }
+ },
+ "approved": [
+  "100% cotton",
+  "long-staple Turkish cotton",
+  "OEKO-TEX certified",
+  "plastic-free packaging",
+  "780 GSM",
+  "dries in one press",
+  "polyester holds body oil",
+  "softener coats fibers",
+  "free shipping over $75",
+  "no softener"
+ ],
+ "ctas": [
+  "SHOP_NOW",
+  "LEARN_MORE",
+  "ORDER_NOW",
+  "GET_OFFER",
+  "BUY_NOW",
+  "SEE_MORE"
+ ],
+ "source": "~/example/brand/Ads/AD_COPY_SPEC.md"
+}

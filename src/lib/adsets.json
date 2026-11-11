@@ -1,0 +1,212 @@
+{
+  "_note": "THE ad set map (2026-10-28). Read by the app (src/lib/adset-route.ts), the Mac publisher and the buyer (~/example/jobs/tracker/adset_route.py). One ABO ad set per angle -> lander, ranked by conviction. 'parked' is the default; the buyer may un-park a set at runtime (registry_docs.adset_state, policy-gated). Routes are tried in order: the first whose 'lander' is a substring of the ad's lander path (and whose 'angle', if given, matches) wins; then by_problem. 2026-11-03: n01 = the native pipeline's Facebook-only ad set (Feed only, no Instagram); placeholder until the admin approves creating it, so it stays parked + manual_only and rows approved into it queue.",
+  "sets": [
+    {
+      "key": "t01",
+      "short": "01",
+      "label": "01 · Smell, not you → smell-over-60",
+      "campaign": "EXAMPLE_CAMPAIGN_TEST",
+      "adset": "EXAMPLE_ADSET_T01",
+      "rank": 1,
+      "parked": false
+    },
+    {
+      "key": "t02",
+      "short": "02",
+      "label": "02 · Smell, not you → the hug",
+      "campaign": "EXAMPLE_CAMPAIGN_TEST",
+      "adset": "EXAMPLE_ADSET_T02",
+      "rank": 2,
+      "parked": false
+    },
+    {
+      "key": "t03",
+      "short": "03",
+      "label": "03 · Smell, saboteur → smell-over-60",
+      "campaign": "EXAMPLE_CAMPAIGN_TEST",
+      "adset": "EXAMPLE_ADSET_T03",
+      "rank": 3,
+      "parked": false
+    },
+    {
+      "key": "t04",
+      "short": "04",
+      "label": "04 · Feel → feel",
+      "campaign": "EXAMPLE_CAMPAIGN_TEST",
+      "adset": "EXAMPLE_ADSET_T04",
+      "rank": 4,
+      "parked": false
+    },
+    {
+      "key": "t05",
+      "short": "05",
+      "label": "05 · Skin → dark-spots-reasons",
+      "campaign": "EXAMPLE_CAMPAIGN_TEST",
+      "adset": "EXAMPLE_ADSET_T05",
+      "rank": 5,
+      "parked": true
+    },
+    {
+      "key": "t06",
+      "short": "06",
+      "label": "06 · Skin → kbeauty-reasons",
+      "campaign": "EXAMPLE_CAMPAIGN_TEST",
+      "adset": "EXAMPLE_ADSET_T06",
+      "rank": 6,
+      "parked": true
+    },
+    {
+      "key": "t07",
+      "short": "07",
+      "label": "07 · Skin → skin-reasons",
+      "campaign": "EXAMPLE_CAMPAIGN_TEST",
+      "adset": "EXAMPLE_ADSET_T07",
+      "rank": 7,
+      "parked": true
+    },
+    {
+      "key": "test_d",
+      "short": "08",
+      "label": "08 · Host, not you → host",
+      "campaign": "EXAMPLE_CAMPAIGN_TEST",
+      "adset": "EXAMPLE_ADSET_HOST",
+      "rank": 8,
+      "parked": true
+    },
+    {
+      "key": "n01",
+      "short": "N1",
+      "label": "N1 · Native mix (all angles) → angle PDP views (Facebook Feed only, Advantage+ audience, 25–65+)",
+      "campaign": "EXAMPLE_CAMPAIGN_TEST",
+      "adset": "EXAMPLE_ADSET_NATIVE",
+      "rank": 9,
+      "parked": false,
+      "manual_only": false,
+      "facebook_only": true,
+      "pipeline": "native"
+    },
+    {
+      "key": "scale",
+      "short": "S",
+      "label": "Scale · proven winners only",
+      "campaign": "EXAMPLE_CAMPAIGN_SCALE",
+      "adset": "EXAMPLE_ADSET_SCALE",
+      "rank": 90,
+      "parked": false,
+      "manual_only": true
+    },
+    {
+      "key": "test_a",
+      "short": "A",
+      "label": "Old test A · Feel (retired)",
+      "campaign": "EXAMPLE_CAMPAIGN_TEST",
+      "adset": "EXAMPLE_ADSET_OLD_A",
+      "rank": 97,
+      "parked": true,
+      "retired": true
+    },
+    {
+      "key": "test_b",
+      "short": "B",
+      "label": "Old test B · Smell (retired)",
+      "campaign": "EXAMPLE_CAMPAIGN_TEST",
+      "adset": "EXAMPLE_ADSET_OLD_B",
+      "rank": 98,
+      "parked": true,
+      "retired": true
+    },
+    {
+      "key": "test_c",
+      "short": "C",
+      "label": "Old test C · Skin (retired)",
+      "campaign": "EXAMPLE_CAMPAIGN_TEST",
+      "adset": "EXAMPLE_ADSET_OLD_C",
+      "rank": 99,
+      "parked": true,
+      "retired": true
+    }
+  ],
+  "routes": [
+    {
+      "lander": "/products/the-switch",
+      "angle": "native-smell",
+      "set": "n01"
+    },
+    {
+      "lander": "/products/the-switch",
+      "angle": "native-luxury",
+      "set": "n01"
+    },
+    {
+      "lander": "/products/the-switch",
+      "angle": "native-eczema",
+      "set": "n01"
+    },
+    {
+      "lander": "/products/the-switch",
+      "angle": "native-microplastic",
+      "set": "n01"
+    },
+    {
+      "lander": "/products/the-switch",
+      "angle": "native-thinskin",
+      "set": "n01"
+    },
+    {
+      "lander": "/products/the-switch",
+      "angle": "native-menopause",
+      "set": "n01"
+    },
+    {
+      "lander": "/products/the-switch",
+      "angle": "native-hair",
+      "set": "n01"
+    },
+    {
+      "lander": "/products/the-switch",
+      "angle": "native-fold",
+      "set": "n01"
+    },
+    {
+      "lander": "smell-over-60",
+      "angle": "saboteur",
+      "set": "t03"
+    },
+    {
+      "lander": "smell-over-60",
+      "set": "t01"
+    },
+    {
+      "lander": "the-hug",
+      "set": "t02"
+    },
+    {
+      "lander": "/pages/feel",
+      "set": "t04"
+    },
+    {
+      "lander": "dark-spots",
+      "set": "t05"
+    },
+    {
+      "lander": "kbeauty",
+      "set": "t06"
+    },
+    {
+      "lander": "skin",
+      "set": "t07"
+    },
+    {
+      "lander": "/pages/host",
+      "set": "test_d"
+    }
+  ],
+  "by_problem": {
+    "SMELL": "t01",
+    "FEEL": "t04",
+    "VALUE": "t04",
+    "SKIN": "t07",
+    "HOST": "test_d",
+    "GIFT": "test_d"
+  }
+}
